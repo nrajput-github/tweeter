@@ -8,6 +8,7 @@ nav {
   right: 0;
   z-index: 500;
   padding: 1.5em;
+  display: flex;
 }
 
 #logo {
@@ -16,42 +17,30 @@ nav {
 
 
 #compose-new {
+  margin-left: auto;
+  font-family: 'Source Sans Pro', sans-serif;
+  color: #FFFFFF;
   display: flex;
   flex-direction: column;
 }
 
-
 button {
-  background-color: transparent;
-  color: #eb0a0a;
+  background-color: #4056A1;
+  color: #FFFFFF;
   border-style: none;
   cursor: pointer;
-  outline: none;
   animation-name: bounce;
   animation-duration: 1.5s;
   animation-iteration-count: infinite;
+  outline: none;
 }
-
-
 
 @keyframes bounce {
   from {
     padding: 0px;
   }
+
   to {
     padding: 10px;
-  }
-}
-/*
-@media (max-width: 850px) {
-  nav {
-    background-color: #6699CC;
-    background-image: url(../images/arches.png);
-  }
-}*/
-
-@media (min-width: 851px) {
-  nav span i{
-    color: #6699CC;
   }
 }
