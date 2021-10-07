@@ -95,8 +95,16 @@ $(document).ready(function() {
   $('.new-tweet form').submit( function (event) {
     event.preventDefault();
     const $form = $(this);
-    const tweet = $form.serialize()
-    $.ajax({ url: "/tweets/", method: 'POST', data: tweet })
+    const newTweetTextStr = $form.children('textarea').val();
+
+    if (!newTweetTextStr) {
+      alert("Empty tweet! Please add some tweet.");
+    } else if (newTweetTextStr.length > 140) {
+      alert("Tweet is too long! max 140 characteres are allowed ");
+    } else {
+      const tweet = $form.serialize();
+      $.ajax({ url: "/tweets/", method: 'POST', data: tweet }) 
+    }
   })
 });
 
