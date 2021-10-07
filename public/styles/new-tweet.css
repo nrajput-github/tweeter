@@ -1,11 +1,16 @@
 
 section.new-tweet {
-  position: relative;
   width: 100%;
   margin-top: 50px;
   display: none;
 }
-
+.new-tweet p {
+  padding: 15px;
+  background-color: #60eef3;
+  color: #941651;
+  display: none;
+  text-align: center;
+}
 /*
 .new-tweet p {
   padding: 15px;

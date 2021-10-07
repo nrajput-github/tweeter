@@ -24,7 +24,7 @@ $(document).ready(function() {
            <span>${escape(tweetObj.content.text)}</span>
           <footer>
           <span>${daysAgo} days ago</span>
-          <span class="interactOptions">PIN RETWEET HEART</span>
+          <span class="interactOptions"><i class="fab fa-font-awesome-flag"></i><i class="fas fa-retweet"></i><i class="fas fa-heart"></i></span>
           </footer>
           `;
 
@@ -62,15 +62,25 @@ $(document).ready(function() {
   loadTweets();
 
   $('.new-tweet form').submit( function (event) {
-    event.preventDefault();
+    event.preventDefault();   
+    $('.new-tweet p').empty().slideUp();
     const $form = $(this);
     const newTweetTextStr = $form.children('textarea').val();
 
     if (!newTweetTextStr) {
-      alert("Empty tweet! Please add some tweet.");
-    } else if (newTweetTextStr.length > 140) {
-      alert("Tweet is too long! max 140 characteres are allowed ");
+      $('.new-tweet p').append('<b>Error:</b> Tweet is empty! add some tweet.');
+      setTimeout(() => {
+        $('.new-tweet p').slideDown();
+      }, 600);
+
+    } else if (newTweetTextStr.length > 140) { 
+      $('.new-tweet p').append("<b>Error:</b> Max 140 characteres are allowed!");
+      setTimeout(() => {
+        $('.new-tweet p').slideDown();
+      }, 600);
+
     } else {
+      $('.new-tweet p').slideUp();
       const tweet = $form.serialize();
       $.ajax({ url: "/tweets/", method: 'POST', data: tweet })
       .then (function (postRequestReturnValue) {
@@ -81,6 +91,9 @@ $(document).ready(function() {
         $form.children('span').text(140);
         const latestTweet = [getRequestReturnValue[getRequestReturnValue.length - 1]];
         renderTweets(latestTweet);
+      })
+      .fail(function (err) {
+        alert(err.responseJSON.error);
       })
     }
   })

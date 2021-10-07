@@ -34,6 +34,7 @@ article.tweet:hover header span.handle {
 
 article.tweet span {
   padding: 10px;
+  overflow-wrap: break-word;
 }
 
 article.tweet:hover span {
@@ -53,8 +54,13 @@ article.tweet footer {
  article.tweet footer span {
   font-size: 15px;
 }
-
 article.tweet footer span.interactOptions {
   font-size: 12px;
   margin-left: auto;
+}
+article.tweet footer span.interactOptions i {
+  padding: 5px;
+}
+article.tweet:hover footer span.interactOptions i {
+  color: #eb9412;
 }
