@@ -5,23 +5,14 @@ section.new-tweet {
   display: none;
 }
 .new-tweet p {
-  padding: 15px;
-  background-color: #60eef3;
+  padding: 10px;
   color: #941651;
   display: none;
   text-align: center;
-}
-/*
-.new-tweet p {
-  padding: 15px;
-  background-color: #F36060;
-  color: #FFFFFF;
-  border-radius: 25px;
-  display: none;
-  text-align: center;
   margin-top: 0px;
+  border: 2px solid #d8190c; 
 }
-*/
+
 textarea {
   background-color:  #f4f1ec;
   font-family: 'Source Sans Pro', sans-serif;
@@ -38,7 +29,7 @@ textarea::placeholder {
   opacity: 1;
 }
 input {
-  background-color: #4056A1;
+  background-color: #2548b9;
   font-family: 'Bungee', sans-serif;
   color: #FFFFFF;
   margin-top: 10px;

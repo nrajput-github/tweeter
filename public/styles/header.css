@@ -1,42 +1,28 @@
 
 body > header {
-  height: 400px;
   width: 100%;
   background-color: #c79800;
   margin-top: 120px;
-  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
 }
-
-/*
-header img {
-  position: absolute;
-  left: 50%;
-  margin-left: -128px;
-}
-
-header h2 {
-  position: absolute;
-  left: 0;
-  right: 0;
-  margin: auto;
-  top: 67%;
-  text-align: center;
-}
-*/
 
 body > header img {
-  position: absolute;
-  left: 0;
-  right: 0;
-  margin: auto;
-  top: 2%;
+  margin: 5px;
 }
 
 body > header h2 {
-  position: absolute;
-  left: 0;
-  right: 0;
-  margin: auto;
-  top: 67%;
-  text-align: center;
+  margin: 5px;
+}
+
+@media (min-width: 850px) {
+  body > header {
+    width: 30%;
+    float: left;
+    margin: 170px 0px 0px 50px;
+    position: fixed;
+  }
 }

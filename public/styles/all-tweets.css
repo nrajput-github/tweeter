@@ -25,11 +25,11 @@ article.tweet header span {
 
 article.tweet header span.handle {
   margin-left: auto;
-  color: #f4f1ec;
+  color: #C8C8C8;
 }
 
 article.tweet:hover header span.handle {
-  color: #C8C8C8;
+  color: #1115e2;
 }
 
 article.tweet span {
@@ -37,7 +37,10 @@ article.tweet span {
   overflow-wrap: break-word;
 }
 
-article.tweet:hover span {
+article.tweet:hover header {
+  font-weight: 600;
+}
+article.tweet:hover footer {
   font-weight: 600;
 }
 article.tweet footer {
@@ -47,6 +50,7 @@ article.tweet footer {
   color:#545149;
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
   padding: 10px;
   margin-top: 5px;
  }
@@ -56,11 +60,11 @@ article.tweet footer {
 }
 article.tweet footer span.interactOptions {
   font-size: 12px;
-  margin-left: auto;
 }
 article.tweet footer span.interactOptions i {
   padding: 5px;
+  color: #c8c8c8;
 }
 article.tweet:hover footer span.interactOptions i {
-  color: #eb9412;
+  color: #1115e2;
 }

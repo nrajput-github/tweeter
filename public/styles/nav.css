@@ -2,13 +2,15 @@ nav {
   background-color: #4056A1;
   color: #FFFFFF;
   height: 120px;
+  position: fixed;
   top: 0;
   left: 0;
-  position: fixed;
   right: 0;
   z-index: 500;
   padding: 1.5em;
   display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 #logo {
@@ -17,7 +19,6 @@ nav {
 
 
 #compose-new {
-  margin-left: auto;
   font-family: 'Source Sans Pro', sans-serif;
   color: #FFFFFF;
   display: flex;
@@ -26,7 +27,7 @@ nav {
 
 button {
   background-color: transparent;
-  color: #FFFFFF;
+  color: #e2270e;
   border-style: none;
   cursor: pointer;
   animation-name: bounce;
@@ -42,5 +43,18 @@ button {
 
   to {
     padding: 10px;
+  }
+}
+@media (max-width: 851px) {
+  nav {
+    background-color: #6699CC;
+    background-image: url(../images/arches.png);
+  }
+}
+
+
+@media (min-width: 850px) {
+  nav span i{
+    color: #6699CC;
   }
 }
